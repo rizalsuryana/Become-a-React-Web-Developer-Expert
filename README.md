@@ -1,4 +1,4 @@
-# Menjadi React Web Developer Expert
+# Become a React Web Developer Expert
 
 Some materials and exercises may be combined into one file, but if the material continues or is implemented in an application from a previous lesson, I will create a separate link for it.
 
