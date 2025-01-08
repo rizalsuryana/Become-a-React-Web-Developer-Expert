@@ -102,3 +102,22 @@ body {
     text-decoration: underline;
   }
   
+
+  .list-materi {
+    border-radius: 5px;
+    width: 550px;
+    margin: auto;
+    box-shadow: 1px 7px 10px 3px rgba(0, 0, 0, 0.2);
+    position: relative;
+    padding-bottom: 20px;
+    padding-top: 5px;
+  }
+
+  .item-materi {
+    border-radius: 5px;
+    width: 450px;
+    margin: auto;
+    box-shadow: 1px 7px 10px 3px rgba(0, 0, 0, 0.2);
+    position: relative;
+    padding-top: 5px;
+  }

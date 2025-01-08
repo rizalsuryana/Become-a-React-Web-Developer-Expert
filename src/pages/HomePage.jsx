@@ -5,7 +5,7 @@ const HomePage = () => {
         <>
         <h2>Become React Developer Expert</h2>
         <p>
-            
+            CSS coming soon... :)
         </p>
         <ListMateri/>
         </>
