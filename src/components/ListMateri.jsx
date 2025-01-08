@@ -1,10 +1,15 @@
+import { Link } from "react-router-dom";
+
 const ListMateri = () => {
     return(
         <>
-        <h2>List Materi</h2>
-        <p>Comming soon
-            ... Besok baru ada
-        </p>
+        <h2>Exercise List materi</h2>
+        <ul>
+            <li>
+                <Link to='/counterapp'>CounterApp</Link>
+                <p>Applying eslint to the generated code</p>
+            </li>
+        </ul>
         </>
     );
 
