@@ -1,0 +1,104 @@
+/* styles.css */
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+  }
+  
+  /* Navigation */
+  nav {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  nav h2 {
+    margin: 0;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  footer h2 {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Main Content */
+  main {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  /* Buttons */
+  button {
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  button.decrease {
+    background-color: #ff6b6b;
+    color: white;
+  }
+  
+  button.decrease:hover {
+    background-color: #ff3b3b;
+  }
+  
+  button.increase {
+    background-color: #1dd1a1;
+    color: white;
+  }
+  
+  button.increase:hover {
+    background-color: #10ac84;
+  }
+  
+  /* Display Counter */
+  .Display {
+    margin: 2rem 0;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  /* List Materi */
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin: 0.5rem 0;
+  }
+  
+  ul li a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  ul li a:hover {
+    text-decoration: underline;
+  }
+  
