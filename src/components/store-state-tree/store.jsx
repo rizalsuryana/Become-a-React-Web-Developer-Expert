@@ -61,6 +61,7 @@ const goalReducer = (goals = [], action = {}) => {
   }
 
   if (action.type === 'DELETE_GOAL') {
+
     return goals.filter((goal)=> goal.id !== action.payload.id);
   }
 
