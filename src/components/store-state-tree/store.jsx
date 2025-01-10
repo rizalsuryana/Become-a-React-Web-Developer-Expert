@@ -34,8 +34,50 @@ function todosReducer(todos = [], action = {}) {
 
   return todos;
 }
+const addGoalActionCreator = ({id, text}) => {
+  return {
+    type : 'ADD_GOAL',
+    payload: {
+      id,
+      text
+    }
+  };
+}
 
-const store = createStore(todosReducer);
+const deleteGoalActionCreator = (id) => {
+  return {
+    payload: {
+      id
+    }
+  };
+}
+
+
+const goalReducer = (goals = [], action = {}) => {
+  if (action.type === 'ADD_GOAL') {
+    return [... goals, action.payload];
+  }
+
+  if (action === 'DELETE_GOAL') {
+    return goals.filter((goal)=> goal.id !== action.payload.id);
+  }
+
+  return goals;
+}
+
+
+// Root reducer
+
+const rootReducer = (state = {}, action= {}) => {
+  return {
+    todos: todosReducer(state.todos, action),
+    goals: goalReducer(state.goals, action)
+  };
+}
+
+
+const store = createStore(rootReducer);
+
 
 store.subscribe(() => {
   console.log('state changed!', store.getState());
