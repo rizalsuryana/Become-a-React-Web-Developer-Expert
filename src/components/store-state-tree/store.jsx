@@ -77,7 +77,6 @@ const rootReducer = (state = {}, action= {}) => {
 
 
 const store = createStore(rootReducer);
-const store = createStore(todosReducer);
 
 
 store.subscribe(() => {
