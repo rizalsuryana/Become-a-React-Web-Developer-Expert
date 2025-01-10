@@ -1,3 +1,7 @@
+/**
+ * Sudah gak di pake
+ */
+
 function createStore(reducer) {
     /**
      * Store memiliki 4 hal

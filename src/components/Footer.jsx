@@ -1,13 +1,9 @@
-const Footer =()=> {
-    return(
-        <>
-        <h2>Footer</h2>
-        <p>
-            Coming soon
-        </p>
-        </>
+const Footer = () => {
+    return (
+        <footer className="footer">
+            <p>&copy; 2025 Rizal Suryana. All rights reserved.</p>
+        </footer>
     );
+};
 
-}
-
-export default Footer
+export default Footer;
