@@ -107,6 +107,23 @@ store.dispatch(
 // menghapus todo dengan id 3
 store.dispatch(deleteTodoActionCreator(3));
 
+store.dispatch(
+  addGoalActionCreator({
+    id: 1,
+    text: 'Get a Doctorate'
+  })
+ );
+  
+ store.dispatch(
+  addGoalActionCreator({
+    id: 2,
+    text: 'Be an Entrepreneur'
+  })
+ );
+  
+ store.dispatch(deleteGoalActionCreator(1));
+ 
+
 const Store = () => {
     return(
         <>
