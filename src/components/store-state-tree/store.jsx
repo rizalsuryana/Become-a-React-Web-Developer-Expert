@@ -34,7 +34,6 @@ function todosReducer(todos = [], action = {}) {
 
   return todos;
 }
-
 const addGoalActionCreator = ({id, text}) => {
   return {
     type : 'ADD_GOAL',
@@ -78,6 +77,8 @@ const rootReducer = (state = {}, action= {}) => {
 
 
 const store = createStore(rootReducer);
+const store = createStore(todosReducer);
+
 
 store.subscribe(() => {
   console.log('state changed!', store.getState());
