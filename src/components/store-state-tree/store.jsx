@@ -1,7 +1,8 @@
 /**
 * Application code
 */
-import { createStore } from './redux';
+// import { createStore } from './redux';
+import { createStore } from "redux";
 
 function addTodoActionCreator({ id, text }) {
   return {
@@ -46,6 +47,7 @@ const addGoalActionCreator = ({id, text}) => {
 
 const deleteGoalActionCreator = (id) => {
   return {
+    type: 'DELETE_GOAL',
     payload: {
       id
     }
@@ -58,7 +60,8 @@ const goalReducer = (goals = [], action = {}) => {
     return [... goals, action.payload];
   }
 
-  if (action === 'DELETE_GOAL') {
+  if (action.type === 'DELETE_GOAL') {
+=======
     return goals.filter((goal)=> goal.id !== action.payload.id);
   }
 
@@ -106,6 +109,23 @@ store.dispatch(
 
 // menghapus todo dengan id 3
 store.dispatch(deleteTodoActionCreator(3));
+
+store.dispatch(
+  addGoalActionCreator({
+    id: 1,
+    text: 'Get a Doctorate'
+  })
+ );
+  
+ store.dispatch(
+  addGoalActionCreator({
+    id: 2,
+    text: 'Be an Entrepreneur'
+  })
+ );
+  
+ store.dispatch(deleteGoalActionCreator(1));
+ 
 
 const Store = () => {
     return(

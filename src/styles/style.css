@@ -1,123 +1,234 @@
-/* styles.css */
-
 /* Global Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
-  }
-  
-  /* Navigation */
-  nav {
-    background-color: #007bff;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-  }
-  
-  nav h2 {
-    margin: 0;
-  }
-  
-  /* Footer */
-  footer {
-    background-color: #333;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  footer h2 {
-    margin-bottom: 0.5rem;
-  }
-  
-  /* Main Content */
-  main {
-    padding: 2rem;
-    text-align: center;
-  }
-  
-  /* Buttons */
-  button {
-    border: none;
-    padding: 0.5rem 1rem;
-    margin: 0.5rem;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s;
-  }
-  
-  button:hover {
-    background-color: #007bff;
-    color: white;
-  }
-  
-  button.decrease {
-    background-color: #ff6b6b;
-    color: white;
-  }
-  
-  button.decrease:hover {
-    background-color: #ff3b3b;
-  }
-  
-  button.increase {
-    background-color: #1dd1a1;
-    color: white;
-  }
-  
-  button.increase:hover {
-    background-color: #10ac84;
-  }
-  
-  /* Display Counter */
-  .Display {
-    margin: 2rem 0;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #2c3e50;
-  }
-  
-  /* List Materi */
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  ul li {
-    margin: 0.5rem 0;
-  }
-  
-  ul li a {
-    text-decoration: none;
-    color: #007bff;
-    font-weight: bold;
-  }
-  
-  ul li a:hover {
-    text-decoration: underline;
-  }
-  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
 
-  .list-materi {
-    border-radius: 5px;
-    width: 550px;
-    margin: auto;
-    box-shadow: 1px 7px 10px 3px rgba(0, 0, 0, 0.2);
-    position: relative;
-    padding-bottom: 20px;
-    padding-top: 5px;
-  }
+/* Navigation */
+nav {
+  background-color: #007bff;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
 
-  .item-materi {
-    border-radius: 5px;
-    width: 450px;
-    margin: auto;
-    box-shadow: 1px 7px 10px 3px rgba(0, 0, 0, 0.2);
-    position: relative;
-    padding-top: 5px;
-  }
+nav h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  margin-top: 20px;
+}
+
+footer h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+}
+
+/* Main Content */
+main {
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Buttons */
+button {
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #007bff;
+  color: white;
+  transform: scale(1.05);
+}
+
+button.decrease {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+button.decrease:hover {
+  background-color: #ff3b3b;
+}
+
+button.increase {
+  background-color: #1dd1a1;
+  color: white;
+}
+
+button.increase:hover {
+  background-color: #10ac84;
+}
+
+/* Display Counter */
+.Display {
+  margin: 2rem 0;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* List Materi */
+.list-materi {
+  border-radius: 8px;
+  width: 550px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  padding: 20px;
+  text-align: left;
+}
+
+.list-materi h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.item-materi {
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  padding: 10px 15px;
+  margin: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.item-materi:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Links */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  margin: 0.5rem 0;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+
+
+
+/* Navigation */
+.navigation {
+  background-color: #007bff;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navigation h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.navigation-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.navigation-list li {
+  margin: 0;
+}
+
+.navigation-list a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navigation-list a:hover {
+  color: #ffdd57;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #bbb;
+}
+
+
+/* Shared Page Styles */
+.contact-page, .about-page {
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 600px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.contact-page h2, .about-page h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #007bff;
+  text-align: center;
+}
+
+.contact-page p, .about-page p {
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.contact-page a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-page a:hover {
+  text-decoration: underline;
+}
