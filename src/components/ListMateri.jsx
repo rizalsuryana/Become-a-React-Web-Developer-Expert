@@ -14,7 +14,7 @@ return (
         <p>Using React Strict Mode for better error detection during development</p>
         </li>
         <li className="item-materi">
-        <Link to="/store">Store</Link>
+        <Link to="/redux">Redux</Link>
         <p>Learning React Redux for state management</p>
         </li>
     </ul>
