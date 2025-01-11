@@ -13,5 +13,4 @@ const GoalInput = ({addGoal}) => {
   )
 }
 
-
 export default GoalInput;

@@ -32,11 +32,14 @@ const GoalList = () => {
         {goals.map((goal)=> (
           <li key={goal.id}>
             <GoalItem {...goal} deleteGoal={onDeleteGoal}/>
+
           </li>
         ))}
       </ul>
     </div>
+
   )
 }
 
 export default GoalList;
+
