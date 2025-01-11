@@ -87,7 +87,7 @@ button.increase:hover {
 /* List Materi */
 .list-materi {
   border-radius: 8px;
-  width: 100;
+  max-width: 600px;
   margin: 2rem auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   background-color: white;
@@ -198,6 +198,17 @@ ul li a:hover {
   margin: 0;
   font-size: 0.875rem;
   color: #bbb;
+}
+
+
+/* home */
+.home-page {
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 777px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 
