@@ -1,12 +1,14 @@
-import React from 'react';
- 
-function TodoItem({ id, text, complete, toggleTodo, deleteTodo }) {
-  return (
+import { useState } from "react";
+
+const TodoItem = ({id, text, complete, toggleTodo, deleteTodo}) => {
+  return(
     <div>
-      <input type="checkbox" onChange={() => toggleTodo(id)} checked={complete} />
+      <input type="checkbox" onChange={()=> toggleTodo(id)} checked={complete} />
       <span>{text}</span>
-      <button onClick={() => deleteTodo(id)}>x</button>
+      <button onClick={()=> deleteTodo(id)}>X</button>
     </div>
   );
 }
-export default TodoItem;
+
+
+export default TodoItem
