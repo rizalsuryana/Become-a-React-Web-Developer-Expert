@@ -24,19 +24,20 @@ const GoalList = () => {
   }
 
   return(
-    <div>
-      <h3>My Goals</h3>
-      <GoalInput addGoal={onAddGoal}/>
+    <div className="todos-goals-container">
+  <h3>My Goals</h3>
+  <div className="todos-goals-input-container">
+    <GoalInput addGoal={onAddGoal} />
+  </div>
+  <ul>
+    {goals.map((goal) => (
+      <li key={goal.id}>
+        <GoalItem {...goal} deleteGoal={onDeleteGoal} />
+      </li>
+    ))}
+  </ul>
+</div>
 
-      <ul>
-        {goals.map((goal)=> (
-          <li key={goal.id}>
-            <GoalItem {...goal} deleteGoal={onDeleteGoal}/>
-
-          </li>
-        ))}
-      </ul>
-    </div>
 
   )
 }

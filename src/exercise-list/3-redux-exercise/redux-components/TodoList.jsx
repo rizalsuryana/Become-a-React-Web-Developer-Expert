@@ -29,18 +29,20 @@ const TodoList = () => {
   }
 
   return (
-    <div>
-      <h3>My Todos</h3>
-      <TodoInput addTodo={onAddTodo} />
+<div className="todos-goals-container">
+  <h3>My Todos</h3>
+  <div className="todos-goals-input-container">
+    <TodoInput addTodo={onAddTodo} />
+  </div>
+  <ul>
+    {todos.map((todo) => (
+      <li key={todo.id} className={todo.completed ? "completed" : ""}>
+        <TodoItem {...todo} toggleTodo={onToggleTodo} deleteTodo={onDeleteTodo} />
+      </li>
+    ))}
+  </ul>
+</div>
 
-      <ul>
-        {todos.map((todo) => (
-          <li key={todo.id}>
-            <TodoItem {...todo} toggleTodo={onToggleTodo} deleteTodo={onDeleteTodo} />
-          </li>
-        ))}
-      </ul>
-    </div>
   );
 }
 
