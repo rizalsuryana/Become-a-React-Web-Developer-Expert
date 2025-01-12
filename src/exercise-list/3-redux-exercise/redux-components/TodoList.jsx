@@ -1,31 +1,39 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { addTodoActionCreator, deleteTodoActionCreator, toggleTodoActionCreator} from '../states/todos/action';
+import { addTodoActionCreator, asyncaddTodo, asyncDeleteTodo, asyncReceiveTodos, asyncToggleTodo, deleteTodoActionCreator, toggleTodoActionCreator} from '../states/todos/action';
 import TodoInput from './TodoInput';
 import TodoItem from './TodoItem';
+import { useEffect } from 'react';
 
 const TodoList = () => {
   const todos = useSelector((states) => states.todos); // TODO: Get todos from store;
   const dispatch = useDispatch();
 
+
+  // API
+  useEffect (() => {
+    dispatch(asyncReceiveTodos());
+  }, [dispatch]);
+
   const onAddTodo = (text) => {
     // TODO: dispatch action ADD_TODO
-    const id = `todo-${+new Date()}`;
-    dispatch(
-      addTodoActionCreator({
-        id,
-        text
-      })
-    );
+    // const id = `todo-${+new Date()}`;
+    // dispatch(
+    //   addTodoActionCreator({
+    //     id,
+    //     text
+    //   })
+    // );
+    dispatch(asyncaddTodo(text));
   }
 
   const onToggleTodo = (id) => {
     // TODO: dispatch action TOGGLE_TODO
-    dispatch(toggleTodoActionCreator(id));
+    dispatch(asyncToggleTodo(id));
   }
 
   const onDeleteTodo = (id) => {
     // TODO: dispatch action DELETE_TODO
-    dispatch(deleteTodoActionCreator(id));
+    dispatch(asyncDeleteTodo(id));
   }
 
   return (
