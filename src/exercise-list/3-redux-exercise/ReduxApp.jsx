@@ -1,12 +1,14 @@
-import GoalsList from "./redux-components/GoalList";
+import GoalList from "./redux-components/GoalList";
 import TodoList from "./redux-components/TodoList";
  
 function ReduxApp() {
  return (
-   <>
-     <TodoList />
-     <GoalsList />
-   </>
+<div className="app-container">
+      <div className="todos-goals-wrapper">
+        <TodoList />
+        <GoalList />
+      </div>
+    </div>
  );
 }
  

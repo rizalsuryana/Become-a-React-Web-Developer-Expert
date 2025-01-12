@@ -87,11 +87,7 @@ button.increase:hover {
 /* List Materi */
 .list-materi {
   border-radius: 8px;
-<<<<<<< HEAD
   max-width: 600px;
-=======
-  width: 100;
->>>>>>> main
   margin: 2rem auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   background-color: white;
@@ -247,4 +243,71 @@ ul li a:hover {
 
 .contact-page a:hover {
   text-decoration: underline;
+}
+
+
+/* /// */
+.app-container {
+  padding: 2rem;
+  background-color: #f4f4f9;
+  min-height: 100vh;
+}
+
+.todos-goals-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Jarak antar kolom */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.todos-goals-container {
+  flex: 1; /* Agar kedua elemen sama lebarnya */
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.todos-goals-input-container {
+  margin-bottom: 20px;
+}
+
+.todos-goals-container h3 {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+.todos-goals-container ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todos-goals-container li {
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.todos-goals-container li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.todos-goals-container li.completed {
+  text-decoration: line-through;
+  color: #aaa;
+}
+@media (max-width: 768px) {
+  .todos-goals-wrapper {
+    flex-direction: column;
+  }
 }
