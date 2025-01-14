@@ -72,7 +72,7 @@ const asyncDeleteTodo = (id) => {
 
 const asyncToggleTodo = (id) => {
   return async (dispatch) => {
-    // await mockAPI.toggleTodo(id); cause lagging check box toggle
+    // await mockAPI.toggleTodo(id); caused lagging check box toggle
     dispatch(toggleTodoActionCreator(id));
 
     try{
