@@ -7,6 +7,10 @@ const goalReducer = (goals = [], action = {}) => {
   
       return goals.filter((goal)=> goal.id !== action.payload.id);
     }
+
+    if (action.type === 'RECEIVE_GOALS') {
+      return action.payload.goals;
+    }
   
     return goals;
   }
