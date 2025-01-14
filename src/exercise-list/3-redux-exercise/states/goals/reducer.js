@@ -1,18 +1,17 @@
+import { ActionType } from "./action";
+
 const goalReducer = (goals = [], action = {}) => {
-    if (action.type === 'ADD_GOAL') {
-      return [... goals, action.payload];
-    }
-  
-    if (action.type === 'DELETE_GOAL') {
-  
-      return goals.filter((goal)=> goal.id !== action.payload.id);
+    switch (action.type){
+      case ActionType.ADD_GOAL:
+        return [...goals, action.payload];
+        case ActionType.DELETE_GOAL:
+          return goals.filter((goal)=> goal.id !==action.payload.id);
+          case ActionType.RECEIVE_GOALS:
+            return action.payload.goals;
+            default:
+              return goals;
     }
 
-    if (action.type === 'RECEIVE_GOALS') {
-      return action.payload.goals;
-    }
-  
-    return goals;
   }
 
   export {goalReducer};

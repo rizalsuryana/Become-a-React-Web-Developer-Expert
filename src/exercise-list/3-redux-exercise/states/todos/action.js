@@ -1,8 +1,17 @@
 import mockAPI from "../../data/mockAPI";
 
+const ActionType = {
+  ADD_TODO    : 'ADD_TODO',
+  DELETE_TODO : 'DELETE_TODO',
+  TOGGLE_TODO : 'TOGGLE_TODO',
+  RECEIVE_TODOS : 'RECEIVE_TODOS'
+};
+
+
+
 const addTodoActionCreator = ({ id, text }) => {
     return {
-      type: 'ADD_TODO',
+      type: ActionType.ADD_TODO,
       payload: {
         id,
         text,
@@ -13,7 +22,7 @@ const addTodoActionCreator = ({ id, text }) => {
   
   const  deleteTodoActionCreator = (id) => {
     return {
-      type: 'DELETE_TODO',
+      type: ActionType.DELETE_TODO,
       payload: {
         id
       }
@@ -22,7 +31,7 @@ const addTodoActionCreator = ({ id, text }) => {
 
 const toggleTodoActionCreator = (id) => {
     return {
-        type: 'TOGGLE_TODO',
+        type: ActionType.TOGGLE_TODO,
         payload: {
           id
         }
@@ -33,7 +42,7 @@ const toggleTodoActionCreator = (id) => {
 
 const receiveTodosActionCreator = (todos) => {
   return{
-    type: 'RECEIVE_TODOS',
+    type: ActionType.RECEIVE_TODOS,
     payload: {
       todos
     }
@@ -63,8 +72,16 @@ const asyncDeleteTodo = (id) => {
 
 const asyncToggleTodo = (id) => {
   return async (dispatch) => {
-    await mockAPI.toggleTodo(id);
+    // await mockAPI.toggleTodo(id); caused lagging check box toggle
     dispatch(toggleTodoActionCreator(id));
+
+    try{
+      await mockAPI.toggleTodo(id);
+    } catch(error){
+      alert(error.message);
+
+      // rollback state change with re-toggling the todo item
+    }
     
   }
 }
@@ -79,5 +96,6 @@ const asyncToggleTodo = (id) => {
         asyncReceiveTodos,
         asyncaddTodo,
         asyncDeleteTodo,
-        asyncToggleTodo
+        asyncToggleTodo,
+        ActionType
         }
